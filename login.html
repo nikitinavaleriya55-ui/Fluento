@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход — Fluento</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="logo">Fluento</a>
+    <nav class="menu"><a href="index.html">← На главную</a></nav>
+  </header>
+
+  <main class="register-main">
+    <form class="register-form" id="loginForm" novalidate>
+      <h1>Вход</h1>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="ivan@example.com" autocomplete="email" autofocus>
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Ваш пароль" autocomplete="current-password">
+        <small class="error" id="passwordError"></small>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <span class="btn-text">Войти</span>
+      </button>
+
+      <p class="form-footer">
+        Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+      </p>
+    </form>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

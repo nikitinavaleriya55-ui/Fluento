@@ -1,0 +1,147 @@
+.register-main {
+  display: flex; justify-content: center; align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 60px 20px;
+  background: var(--bg);
+}
+.register-form {
+  width: 100%; max-width: 460px;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.register-form h1 { text-align: center; margin-bottom: 30px; color: var(--text); font-size: clamp(24px, 4vw, 32px); }
+.register-form h1::after { display: none; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text); font-size: 14px; }
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-family: inherit;
+  background: var(--card-bg);
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form-group input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(102,126,234,0.2); }
+.form-group input.error { border-color: #e74c3c; }
+.form-group input.error:focus { box-shadow: 0 0 0 3px rgba(231,76,60,0.2); }
+.form-group input.success { border-color: #27ae60; }
+
+.error { display: block; color: #e74c3c; font-size: 13px; margin-top: 6px; min-height: 18px; }
+
+/* Показать пароль */
+.password-wrapper { position: relative; }
+.password-wrapper input { padding-right: 50px; }
+.toggle-password {
+  position: absolute; right: 10px; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none;
+  font-size: 18px; cursor: pointer; padding: 5px;
+}
+
+/* Индикатор силы пароля */
+.strength-bar {
+  height: 6px; background: var(--border);
+  border-radius: 3px; overflow: hidden;
+  margin-top: 10px;
+}
+.strength-fill {
+  height: 100%; width: 0;
+  transition: width 0.3s, background 0.3s;
+  background: #eee;
+}
+.strength-text { font-size: 13px; margin-top: 5px; color: var(--text-muted); }
+
+/* Чекбокс */
+.checkbox-group { margin-bottom: 25px; }
+.checkbox-label {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer; font-weight: normal;
+}
+.checkbox-label input[type="checkbox"] {
+  width: 18px; height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+.checkbox-label a { color: var(--primary); }
+
+/* Кнопка submit со спиннером */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), transform 0.2s;
+  display: flex; justify-content: center; align-items: center; gap: 10px;
+  font-family: inherit;
+}
+.submit-btn:hover:not(:disabled) { background: var(--primary-dark); transform: translateY(-2px); }
+.submit-btn:active:not(:disabled) { transform: scale(0.98); }
+.submit-btn:disabled { background: #ccc; cursor: not-allowed; opacity: 0.7; }
+
+.btn-spinner {
+  display: none;
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.submit-btn.loading .btn-text { display: none; }
+.submit-btn.loading .btn-spinner { display: block; }
+
+.form-footer { text-align: center; margin-top: 20px; color: var(--text-muted); font-size: 14px; }
+.form-footer a { color: var(--primary); font-weight: 600; }
+
+/* Модалка */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  color: var(--text);transform: scale(0.8);
+  transition: transform 0.3s;
+}
+.modal-overlay.active .modal { transform: scale(1); }
+.modal-icon { font-size: 60px; margin-bottom: 15px; }
+.modal h2 { margin-bottom: 10px; }
+.modal p { color: var(--text-muted); margin-bottom: 25px; }
+.modal-btn {
+  padding: 12px 30px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.modal-btn:hover { filter: brightness(0.9); }
+
+@media (max-width: 480px) {
+  .register-form { padding: 25px; }
+}

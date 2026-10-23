@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fluento — платформа для изучения иностранных языков с преподавателями-носителями. 12 языков, 200+ преподавателей, первый урок бесплатно.">
+  <title>Fluento — учи языки с удовольствием</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Кнопка темы -->
+  <button class="theme-toggle" id="themeBtn" aria-label="Переключить тему">🌗 Тема</button>
+
+  <!-- ===== ШАПКА ===== -->
+<header class="nav" id="top">
+  <a href="#hero" class="logo">Fluento</a>
+
+  <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="menu" id="mainMenu" aria-label="Основная навигация">
+    <a href="#languages">Языки</a>
+    <a href="#teachers">Преподаватели</a>
+    <a href="#pricing">Тарифы</a>
+    <a href="#slider">Отзывы</a>
+    <a href="#blog">Статьи</a>
+    <a href="#help">Помощь</a>
+    <a href="register.html" class="btn-nav">Регистрация</a>
+    <a href="login.html" class="btn-nav ghost">Войти</a>
+  </nav>
+</header>
+
+  <main>
+    <!-- ===== ГЕРОЙ ===== -->
+    <section id="hero" class="hero">
+      <h1>Учи языки <span class="grad">с удовольствием</span></h1>
+      <p class="lead">12 языков, 200+ преподавателей-носителей. Первый урок — бесплатно.</p>
+      <div class="hero-actions">
+        <a href="#teachers" class="btn grad-btn">Найти преподавателя</a>
+        <a href="#languages" class="btn ghost">Все языки</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="num">12</span><span class="cap">языков</span></div>
+        <div class="stat"><span class="num">200+</span><span class="cap">преподавателей</span></div>
+        <div class="stat"><span class="num">50k</span><span class="cap">студентов</span></div>
+        <div class="stat"><span class="num">24/7</span><span class="cap">поддержка</span></div>
+      </div>
+      <div class="dot dot1" aria-hidden="true"></div>
+      <div class="dot dot2" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== ЯЗЫКИ ===== -->
+    <section id="languages" class="section">
+      <h2>Выбери свой язык</h2>
+      <div class="grid-cards">
+        <article class="card">
+          <span class="badge">ХИТ</span>
+          <div class="photo"><img src="images/lang-en.jpg" alt="Английский язык"></div>
+          <h3>Английский</h3>
+          <p class="muted">С нуля до C2. Носители из UK и USA.</p>
+          <button class="btn buy-btn" data-id="1" data-name="Английский" data-price="1990">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <span class="badge sale">-20%</span>
+          <div class="photo"><img src="images/lang-de.jpg" alt="Немецкий язык"></div>
+          <h3>Немецкий</h3>
+          <p class="muted">Goethe-сертификат. Берлин.</p>
+          <button class="btn buy-btn" data-id="2" data-name="Немецкий" data-price="1790">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-fr.jpg" alt="Французский язык"></div>
+          <h3>Французский</h3>
+          <p class="muted">DELF/DALF. Парижский акцент.</p>
+          <button class="btn buy-btn" data-id="3" data-name="Французский" data-price="1890">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-es.jpg" alt="Испанский язык"></div>
+          <h3>Испанский</h3>
+          <p class="muted">DELE. Испания и Латинская Америка.</p><button class="btn buy-btn" data-id="4" data-name="Испанский" data-price="1690">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-it.jpg" alt="Итальянский язык"></div>
+          <h3>Итальянский</h3>
+          <p class="muted">CILS. Разговорный с первого урока.</p>
+          <button class="btn buy-btn" data-id="5" data-name="Итальянский" data-price="1790">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-cn.jpg" alt="Китайский язык"></div>
+          <h3>Китайский</h3>
+          <p class="muted">HSK 1–6. Тоны и иероглифы.</p>
+          <button class="btn buy-btn" data-id="6" data-name="Китайский" data-price="2190">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-jp.jpg" alt="Японский язык"></div>
+          <h3>Японский</h3>
+          <p class="muted">JLPT N5–N1. Хирагана, катакана, кандзи.</p>
+          <button class="btn buy-btn" data-id="7" data-name="Японский" data-price="2290">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-kr.jpg" alt="Корейский язык"></div>
+          <h3>Корейский</h3>
+          <p class="muted">TOPIK. Хангыль за 2 недели.</p>
+          <button class="btn buy-btn" data-id="8" data-name="Корейский" data-price="2190">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-ar.jpg" alt="Арабский язык"></div>
+          <h3>Арабский</h3>
+          <p class="muted">Фусха и диалекты.</p>
+          <button class="btn buy-btn" data-id="9" data-name="Арабский" data-price="2490">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-tr.jpg" alt="Турецкий язык"></div>
+          <h3>Турецкий</h3>
+          <p class="muted">TÖMER. Гармония гласных.</p>
+          <button class="btn buy-btn" data-id="10" data-name="Турецкий" data-price="1590">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-pt.jpg" alt="Португальский язык"></div>
+          <h3>Португальский</h3>
+          <p class="muted">CAPLE. Бразилия и Португалия.</p>
+          <button class="btn buy-btn" data-id="11" data-name="Португальский" data-price="1890">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+        <article class="card">
+          <div class="photo"><img src="images/lang-pl.jpg" alt="Польский язык"></div>
+          <h3>Польский</h3>
+          <p class="muted">B1–C1. Славянские языки — легко!</p>
+          <button class="btn buy-btn" data-id="12" data-name="Польский" data-price="1490">Купить</button>
+          <label class="fav"><input type="checkbox"><span>В избранное</span></label>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== ПРЕПОДАВАТЕЛИ ===== -->
+    <section id="teachers" class="section">
+      <h2>Наши преподаватели</h2>
+      <div class="grid-teachers">
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-1.jpg" alt="Anna Smith">
+          <h3>Anna Smith</h3>
+          <p class="muted">Английский · Лондон</p>
+          <p class="bio">10 лет практики, IELTS.</p><a href="#" class="btn small">Связаться</a>
+        </article>
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-2.jpg" alt="Marco Rossi">
+          <h3>Marco Rossi</h3>
+          <p class="muted">Итальянский · Рим</p>
+          <p class="bio">Разговорный с нуля.</p>
+          <a href="#" class="btn small">Связаться</a>
+        </article>
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-3.jpg" alt="Li Wei">
+          <h3>Li Wei</h3>
+          <p class="muted">Китайский · Пекин</p>
+          <p class="bio">HSK 1–6, тоны.</p>
+          <a href="#" class="btn small">Связаться</a>
+        </article>
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-4.jpg" alt="Sophie Dubois">
+          <h3>Sophie Dubois</h3>
+          <p class="muted">Французский · Париж</p>
+          <p class="bio">DELF/DALF, фонетика.</p>
+          <a href="#" class="btn small">Связаться</a>
+        </article>
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-5.jpg" alt="Kenji Tanaka">
+          <h3>Kenji Tanaka</h3>
+          <p class="muted">Японский · Токио</p>
+          <p class="bio">JLPT N5–N1, кандзи.</p>
+          <a href="#" class="btn small">Связаться</a>
+        </article>
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-6.jpg" alt="Yuna Kim">
+          <h3>Yuna Kim</h3>
+          <p class="muted">Корейский · Сеул</p>
+          <p class="bio">TOPIK, хангыль.</p>
+          <a href="#" class="btn small">Связаться</a>
+        </article>
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-7.jpg" alt="Ahmed Hassan">
+          <h3>Ahmed Hassan</h3>
+          <p class="muted">Арабский · Каир</p>
+          <p class="bio">Фусха и диалект.</p>
+          <a href="#" class="btn small">Связаться</a>
+        </article>
+        <article class="teacher">
+          <img class="teacher-photo" src="images/teacher-8.jpg" alt="Elena Petrova">
+          <h3>Elena Petrova</h3>
+          <p class="muted">Английский · Москва</p>
+          <p class="bio">TOEFL, бизнес-английский.</p>
+          <a href="#" class="btn small">Связаться</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== ТАРИФЫ ===== -->
+    <section id="pricing" class="section">
+      <h2>Тарифы</h2>
+      <div class="grid-pricing">
+        <article class="price-card">
+          <h3>Старт</h3>
+          <p class="price">0 ₽</p>
+          <ul><li>Первый урок бесплатно</li><li>Тест уровня</li></ul>
+          <a href="register.html" class="btn">Начать</a>
+        </article>
+        <article class="price-card featured">
+          <span class="badge">NEW</span>
+          <h3>Про</h3>
+          <p class="price">1 990 ₽/мес</p>
+          <ul><li>8 уроков</li><li>Все языки</li><li>Домашка</li></ul>
+          <a href="register.html" class="btn grad-btn">Выбрать</a>
+        </article>
+        <article class="price-card">
+          <h3>Максимум</h3>
+          <p class="price">3 990 ₽/мес</p>
+          <ul><li>Безлимит</li><li>Куратор</li><li>Экзамены</li></ul>
+          <a href="register.html" class="btn">Выбрать</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== СЛАЙДЕР ===== -->
+    <section id="slider" class="section">
+      <h2>Отзывы студентов</h2>
+      <div class="slider" id="reviewSlider">
+        <button class="slider__prev" aria-label="Назад">‹</button>
+        <div class="slider__viewport">
+          <div class="slider__track" id="sliderTrack"></div>
+        </div>
+        <button class="slider__next" aria-label="Вперёд">›</button>
+        <div class="slider__dots" id="sliderDots"></div>
+      </div>
+    </section>
+
+    <!-- ===== КОРЗИНА ===== -->
+    <section id="cart" class="section">
+      <h2>Корзина</h2>
+      <div class="cart-box">
+        <div id="cartItems" class="cart-items"><p class="muted">Корзина пуста</p></div><div class="cart-footer">
+          <p>Итого: <strong id="cartTotal">0 ₽</strong></p>
+          <button class="btn ghost" id="clearCart">Очистить</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПАГИНАЦИЯ ===== -->
+    <section id="blog" class="section">
+      <h2>Полезные статьи</h2>
+      <input type="search" id="searchInput" class="search" placeholder="Поиск по статьям...">
+      <div id="postsList" class="posts-list"></div>
+      <div class="pagination" id="pagination"></div>
+    </section>
+
+    <!-- ===== ПОМОЩЬ (details, progress, meter, figure, table) ===== -->
+    <section id="help" class="section">
+      <h2>Помощь и статистика</h2>
+
+      <figure class="help-figure">
+        <img src="images/screen.png" alt="Интерфейс Fluento" width="600">
+        <figcaption>Интерфейс Fluento: уроки, преподаватели, прогресс</figcaption>
+      </figure>
+
+      <label for="profile">Профиль заполнен на:</label>
+      <progress id="profile" max="100" value="70">70%</progress>
+
+      <label for="importance">Средний уровень студентов (1–5):</label>
+      <meter id="importance" min="1" max="5" value="4" optimum="5">4 из 5</meter>
+
+      <details>
+        <summary>Как записаться на урок?</summary>
+        <p>Зарегистрируйтесь, выберите язык, преподавателя и удобное время. Первый урок бесплатный.</p>
+      </details>
+      <details>
+        <summary>Можно ли учить несколько языков?</summary>
+        <p>Да, на тарифах «Про» и «Максимум» доступны все 12 языков.</p>
+      </details>
+    </section>
+
+    <!-- ===== ТАБЛИЦА ===== -->
+    <section id="data" class="section">
+      <h2>Популярные направления</h2>
+      <table>
+        <caption>Сводная таблица по языкам (пример наполнения)</caption>
+        <thead>
+          <tr>
+            <th>Язык</th>
+            <th>Преподавателей</th>
+            <th>Студентов</th>
+            <th>Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Английский</td><td>45</td><td>12 000</td><td>1 990 ₽</td></tr>
+          <tr><td>Немецкий</td><td>28</td><td>6 500</td><td>1 790 ₽</td></tr>
+          <tr><td>Французский</td><td>22</td><td>4 200</td><td>1 890 ₽</td></tr>
+          <tr><td>Китайский</td><td>18</td><td>3 800</td><td>2 190 ₽</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="4">Всего: 12 языков, 200+ преподавателей</td></tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+
+  <!-- ===== ФУТЕР ===== -->
+  <footer id="contacts" class="footer">
+    <div class="f-grid">
+      <div>
+        <p>© 2026, Fluento</p>
+        <p>Учи языки с удовольствием.</p>
+      </div>
+      <div>
+        <p>Услуги</p>
+        <p>Английский · Немецкий · Французский · Китайский</p>
+      </div>
+      <div>
+        <p>Контакты</p>
+        <a href="mailto:hello@fluento.example">hello@fluento.example</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
